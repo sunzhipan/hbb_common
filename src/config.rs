@@ -75,17 +75,17 @@ lazy_static::lazy_static! {
         //ID服务器，该配置部分客户端生效，读取Repository secrets值
         map.insert(
             "custom-rendezvous-server".to_string(), 
-            option_env!("RENDEZVOUS_SERVER").unwrap_or("rustdesk.320999.xyz").into()
+            option_env!("RENDEZVOUS_SERVER").unwrap_or("rs-ny.rustdesk.com").into()
         );
         //中继服务器，读取Repository secrets值
         map.insert(
             "relay-server".to_string(), 
-            option_env!("RELAY_SERVER").unwrap_or("rustdesk.320999.xyz").into()
+            option_env!("RELAY_SERVER").unwrap_or("rs-ny.rustdesk.com").into()
         );
         //API服务器，读取Repository secrets值
         map.insert(
             "api-server".to_string(), 
-            option_env!("API_SERVER").unwrap_or("http://47.109.69.109:21114").into()
+            option_env!("API_SERVER").unwrap_or("https://admin.rustdesk.com").into()
         );
         //KEY，读取Repository secrets值
         map.insert(
@@ -169,7 +169,7 @@ lazy_static::lazy_static! {
         //隐藏安全设置选项
         map.insert("hide-security-settings".to_string(), "N".to_string());
         //隐藏网络设置选项
-        map.insert("hide-network-settings".to_string(), "N".to_string());
+        map.insert("hide-network-settings".to_string(), "Y".to_string());
         RwLock::new(map)
     };
 }
