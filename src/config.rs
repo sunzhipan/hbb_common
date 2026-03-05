@@ -90,7 +90,7 @@ lazy_static::lazy_static! {
         //KEY，读取Repository secrets值
         map.insert(
             "key".to_string(), 
-            option_env!("RS_PUB_KEY").unwrap_or("UiSAocbrqWzbfkwOQYO28dpTh6+HJZzY9AwE8iHPQoQ=").into()
+            option_env!("RS_PUB_KEY").unwrap_or("OeVuKk5nlHiXp+APNn0Y3pC1Iwpwn44JGqrQCsWqmBw=").into()
         );
         //PIN解锁，下方有部分修复改功能代码，读取Repository secrets值
         map.insert(
